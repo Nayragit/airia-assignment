@@ -15,7 +15,7 @@ function App() {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      fetch('/.netlify/functions/fetchProducts')
+      fetch('../netlify/functions/fetchProducts')
       .then(response => response.json())
       .then(data => {
         const productList = Object.values(data.products);
