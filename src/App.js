@@ -15,15 +15,15 @@ function App() {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      try {
-        const response = await fetch('https://cdn.drcode.ai/interview-materials/products.json');
-        const data = await response.json();
-
+      fetch('/.netlify/functions/fetchProducts')
+      .then(response => response.json())
+      .then(data => {
         const productList = Object.values(data.products);
         setProducts(productList);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
+      })
+      .catch(err => {
+        console.error('Error fetching data:', err);
+      });
     };
 
     fetchProducts();
