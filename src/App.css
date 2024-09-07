@@ -1,0 +1,165 @@
+/* App.css */
+
+/* General Styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: #f0f4f8; /* Light bluish-grey background for the app */
+}
+
+.App {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  background-color: #f0f4f8; /* Matches the body background */
+  color: #333; /* Dark text for contrast */
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #2c3e50; /* Darker shade for headings */
+}
+
+input[type="text"] {
+  padding: 10px;
+  margin: 20px 0;
+  width: 300px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+select {
+  margin-right: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff; /* Primary button color */
+  color: white;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  background-color: #ccc;
+}
+
+button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product-item {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: calc(33% - 20px);
+  text-align: left;
+  background-color: #ffffff; /* White background for product cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for product items */
+  transition: transform 0.2s ease-in-out;
+}
+
+.product-item:hover {
+  background-color: #f8fafc;
+  transform: scale(1.03);
+}
+
+.product-item h3 {
+  margin: 0;
+  color: #34495e; /* Slightly darker text for product titles */
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Shadow for modal */
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background: darkred;
+}
+
+.modal-content h2 {
+  margin: 0;
+  color: #2c3e50;
+}
+
+.modal-content p {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #34495e;
+}
+
+/* Product Detail Styles */
+.product-detail {
+  padding: 20px;
+}
+
+.product-detail h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #2c3e50;
+}
+
+.product-detail p {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #34495e;
+}
+
+.form-container {
+  margin: 0 0 15px 0;
+}
+
+tr {
+  margin: 0 0 15px 0;
+}
