@@ -16,7 +16,7 @@ function App() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch('https://cors-anywhere.herokuapp.com/https://cdn.drcode.ai/interview-materials/products.json');
+        const response = await fetch('https://cdn.drcode.ai/interview-materials/products.json');
         const data = await response.json();
 
         const productList = Object.values(data.products);
